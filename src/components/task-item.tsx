@@ -114,7 +114,7 @@ const TaskItem = (props: Props) => {
             variant="unstyled"
             fontSize={19}
             px={1}
-            py={0}
+            py={1}
             autoFocus
             blurOnSubmit
             onChangeText={handleChangeSubject}

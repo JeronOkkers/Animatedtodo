@@ -66,7 +66,7 @@ export default function MainScreen() {
     })
   }, [])
 
-  const handleFinishEditingTaskItem = useCallback(_item => {
+  const handleFinishEditingTaskItem = useCallback( item => {
     setEditingItemId(null)
   }, [])
 
@@ -88,8 +88,10 @@ export default function MainScreen() {
       subject: '',
       done: false
     }
+    if (newTask.subject.trim() !== '') {
     setData([newTask, ...data])
     setEditingItemId(id)
+  }
   }
 
   useEffect(() => {
